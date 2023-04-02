@@ -1,2 +1,2 @@
 # Hacker-Rank
-source code from Racker rank.
+source code from Hacker rank.
