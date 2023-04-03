@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+void sum(int *pa,int *pb)
+{
+    int s;
+    s=(*pa) + (*pb);
+    cout<<s<<"\n";    
+}
+void diff(int *pa,int *pb)
+{
+    int d;
+    if(*pa > *pb)
+    {
+        d=(*pa)-(*pb);
+        cout<<d;
+    }
+    else 
+    {
+        d=(*pb)-(*pa);
+        cout<<d;    
+    }
+}
+int main()
+{
+    int a,b,*pa,*pb;
+    cin>>a>>b;
+    pa=&a;
+    pb=&b;
+    sum(pa,pb);
+    diff(pa,pb);
+    return 0;
+}
