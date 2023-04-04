@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
-class Triangle{
+class Triangle
+{
     public:
     	void triangle()
         {
      		cout<<"I am a triangle \n";
     	}
 };
-class Isosceles : public Triangle{
+class Isosceles : public Triangle
+{
     public:
     	void isosceles()
         {
@@ -18,7 +20,8 @@ class Isosceles : public Triangle{
               cout<<"In an isosceles triangle two sides are equal \n";
         }
 };
-int main(){
+int main()
+{
     Isosceles isc;
     isc.isosceles();
   	isc.description();
