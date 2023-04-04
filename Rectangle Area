@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+ class Rectangle
+ {
+     public:                                      /* Here we provide public,so only in "read_input()" function we can get the input */
+     int l,b;
+        void display()
+     { 
+         cout<<l<<" "<<b<<"\n";
+     }
+ };
+ class RectangleArea :public Rectangle
+ {
+    public:
+    void read_input()
+    {
+        cin>>l>>b;
+    }
+    void display()
+    {
+        int area;
+        area=l*b;
+        cout<<area;
+    }     
+ };
+ 
+ /* 
+ r_area.Rectangle::display(); calls the display() method of the Rectangle class on the r_area object using the scope resolution operator ::.
+ This line explicitly calls the display() method of the Rectangle class, even though RectangleArea class also has a method named display()
+ that overrides the display() method of the Rectangle class. Since l and b are member variables of the Rectangle class and are not private,
+ they can be accessed by the display() method of the Rectangle class.
+ */
+ 
+int main()
+{
+    /*Declare a RectangleArea object*/
+    RectangleArea r_area;
+    
+    /*Read the width and height*/
+    r_area.read_input();
+    
+    /* Print the width and height*/
+    r_area.Rectangle::display();
+    
+    /*Print the area*/
+    r_area.display();
+    
+    return 0;
+}
